@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textview_new_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="Droid Sans"
+        android:text="@string/new_game"
+        android:textSize="64sp" />
+
+
+    <TextView
+        android:id="@+id/textview_player_color"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_new_game"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/player_color"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Spinner
+        android:id="@+id/spinner_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_new_game"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/textview_player_color"
+        android:entries="@array/player_color"
+        android:prompt="@string/player_color" />
+
+    
+    <TextView
+        android:id="@+id/textview_difficulty"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_color"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/difficulty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_color"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/textview_difficulty"
+        android:entries="@array/difficulty"
+        android:prompt="@string/difficulty" />
+
+    
+    <TextView
+        android:id="@+id/textview_start_positions"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_difficulty"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/start_positions"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Spinner
+        android:id="@+id/spinner_start_positions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spinner_difficulty"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/textview_start_positions"
+        android:entries="@array/start_positions"
+        android:prompt="@string/start_positions" />
+
+    <Button
+        android:id="@+id/button_start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@id/spinner_start_positions"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:fontFamily="Droid Sans"
+        android:height="70dp"
+        android:minHeight="48dip"
+        android:minWidth="200dip"
+        android:onClick="startGame"
+        android:text="@string/start_game"
+        android:textSize="24sp" />
+    
+</RelativeLayout>
